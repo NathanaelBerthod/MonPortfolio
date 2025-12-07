@@ -1,0 +1,178 @@
+body {
+            background: #E5E5E5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: #111;
+            overflow-x: hidden;
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 24px 40px;
+            font-size: 11px;
+            letter-spacing: 0.3px;
+            position: relative;
+        }
+
+        .top-bar::before {
+            content: "HUYML©";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            font-weight: 400;
+        }
+
+        /* GRAND TITRE CENTRÉ */
+        .center-title {
+            text-align: center;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .center-title h1 {
+            font-size: clamp(80px, 12vw, 180px);
+            font-weight: 300;
+            margin: 0;
+            line-height: 0.85;
+            letter-spacing: -0.02em;
+        }
+
+        .center-title .italic {
+            font-family: "Georgia", "Times New Roman", serif;
+            font-style: italic;
+            font-size: clamp(85px, 12.5vw, 190px);
+            font-weight: 300;
+        }
+
+        .center-title .ml {
+            font-size: clamp(24px, 3vw, 42px);
+            vertical-align: super;
+            font-weight: 400;
+        }
+
+        /* NAVIGATION */
+        .main-nav {
+            width: 100%;
+            max-width: 900px;
+            margin: 60px auto 0 auto;
+            padding: 0 40px;
+        }
+
+        .main-nav ul {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            list-style: none;
+            text-align: center;
+        }
+
+        .main-nav li {
+            padding: 12px 0;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #111;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            transition: opacity 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            opacity: 0.6;
+        }
+
+        /* SECTION BASSE */
+        .bottom-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 100px 60px 60px;
+            margin-top: 60px;
+            gap: 40px;
+        }
+
+        .left-text, .right-text {
+            font-size: 11px;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+            flex: 1;
+            max-width: 280px;
+        }
+
+        .middle-section {
+            flex: 1;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .illustration-container {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 20px;
+        }
+
+        .illustration-container svg {
+            width: 100%;
+            height: auto;
+        }
+
+        .middle-section p {
+            font-size: 12px;
+            font-style: italic;
+            color: #333;
+        }
+
+        /* PLUS ICONS */
+        .plus-icon {
+            font-size: 32px;
+            font-weight: 300;
+            color: #111;
+            margin-top: -20px;
+        }
+
+        /* COPYRIGHT */
+        .copyright {
+            position: fixed;
+            bottom: 24px;
+            right: 40px;
+            font-size: 11px;
+            letter-spacing: 0.3px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .bottom-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 60px 40px;
+            }
+
+            .left-text, .right-text, .middle-section {
+                max-width: 100%;
+            }
+
+            .plus-icon {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .top-bar {
+                font-size: 9px;
+                padding: 20px;
+            }
+
+            .main-nav ul {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .copyright {
+                position: static;
+                text-align: center;
+                margin-top: 40px;
+            }
+        }

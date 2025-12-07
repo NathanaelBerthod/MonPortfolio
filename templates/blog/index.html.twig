@@ -1,20 +1,63 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mon Portfolio{% endblock %}</title>
 
-{% block title %}Hello BlogController!{% endblock %}
+    <link rel="stylesheet" href="{{ asset('style.css/style.css') }}">
+</head>
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #d70d0dff; padding: 2px 6px; }
-</style>
+<body>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Bonsoirrrr nathouuu<code>C:/symfony/symfony-projects/MonPortfolio/src/Controller/BlogController.php</code></li>
-        <li>Your template at <code>C:/symfony/symfony-projects/MonPortfolio/templates/blog/index.html.twig</code></li>
-    </ul>
+<div class="top-bar">
+    <div>Open for any collaborations and offers</div>
+    <div>Folio Vol.1—</div>
 </div>
-{% endblock %}
+
+<div class="center-title">
+    <h1>
+        <span class="italic">Nathanael</span> Berthod <span class="ml">(NB)</span>
+    </h1>
+</div>
+
+
+    <nav class="main-nav">
+            <a href="{{ path('app_blog') }}">01 Works</a>
+            <a href="{{ path('page1') }}">02 About</a>
+            <a href="{{ path('page2') }}">03 Playgrounds</a>
+            <a href="{{ path('page3') }}">04 Contact</a>
+    </nav>
+
+  <div class="bottom-section">
+    <div class="left-text">
+        HUY PHAN (HE/HIM) AKA HUYML IS AN<br>
+        INDEPENDENT DESIGNER FROM HO CHI<br>
+        MINH CITY, VIETNAM
+    </div>
+
+    <div class="middle-img">
+        <img src="/images/illustration.png" alt="design">
+        <p>Just an ordinary designer. From Vietnam with love.</p>
+    </div>
+
+    <div class="right-text">
+        PASSIONATE ABOUT CREATING<br>
+        UNFORGETTABLE AND BEAUTIFUL DIGITAL<br>
+        EXPERIENCES.
+    </div>
+</div>
+
+
+<main>
+    {% block body %}{% endblock %}
+</main>
+
+</body>
+</html>
+
+
+
+
+
+
+

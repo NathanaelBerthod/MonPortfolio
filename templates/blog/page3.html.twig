@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mon Portfolio{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ asset('style.css/style1.css') }}">
+</head>
+
+<body>
+	<script src="script.js">
+	</script>
+<!--Ici c'est l'en-tête-->
+<header>
+  <h1>Mon Portfolio</h1>
+</header>
+
+<!--Ici c'est le menu-->
+
+  <nav>
+  <ul>
+    <li class="menu-accueil">
+        <a href="{{ path('app_blog') }}">01 Works</a></li>
+    <li class="menu-page1">
+        <a href="{{ path('page1') }}">02 About</a></li>
+    <li class="menu-page2">
+        <a href="{{ path('page2') }}">03 Playgrounds</a></li>
+ <li class="menu-page3">
+        <a href="{{ path('page3') }}">04 Contact</a>
+  </ul>
+ </nav>
+
+<!--Ici c'est le contenu de la page Web-->
+  <h1>l'environnement et sa mise en place par le studio Ghibli</h1>
+  <!--Ici c'est la photo de paysage-->
+  <center><img src="Logo_Ghibli.svg.png" alt="nausicaa" width="450" height="250" /></center>
+   
+  <center><h2 id="titre1"> La place de l’écologie dans les films du studio Ghibli</h2></center>
+  
+<p><em>Le studio Ghibli d’Hayao Miyazaki et d’Isao Takahata
+Le Studio Ghibli fondé le 15 juin 1985 par Hayao Miyazaki et Isao Takahata est un studio d’animation japonais. Il est mondialement connu grâce à ses sublimes courts comme ses longs métrages. Nous allons aujourd’hui nous intéresser au message écologique qui transparaît dans leurs films.</em></p>
+<br>
+<p><em>Hayao Miyazaki est le réalisateur phare du studio, il a notamment produit Mon voisin Totoro, Princesse Mononoké, Le Voyage de Chihiro. Dans ses œuvres, il propage des idéologies qui lui sont chères et pour lesquelles il se bat : le féminisme, le pacifisme, l’écologie. Pour réaliser ses films, il s’est beaucoup inspiré de ses expériences personnelles comme sa fascination pour les avions, son passage et son intérêt pour le syndicalisme et le marxisme. Né en 1941 au Japon, il connut la fin de la Seconde Guerre mondiale et les nombreux bombardements qui y eurent lieu.</em></p>
+<br>
+<p><em>Quant à Isao Takahata, il était lui aussi réalisateur pour le Studio Ghibli et a réalisé des films tels que Le Tombeau des lucioles ou Pompoko. Il a également été marqué par la Seconde Guerre mondiale et sa violence, ainsi en 1945, il avait dû fuir Okayama lors de son bombardement. Il s’engagea aux côtés d’Hayao Miyazaki dans le syndicalisme et il faut ajouter qu’il était, tout comme son camarade, un militant pacifiste et écologiste.</em></p>
+<br>
+<p><em>À travers ces deux personnalités, le Studio Ghibli se retrouve alors engagé dans de nombreux combats, dont l’écologie. Néanmoins, il faut noter que la place de l’écologie est sensiblement différente au Japon, en effet, les Japonais se sont souvent retrouvés confrontés à des catastrophes naturelles et sont donc attentifs aux forces de la nature. Également, de par la religion shintoïste, nombreux sont les Japonais à accorder de l’importance à la nature et la volonté de vivre en harmonie avec elle.</em></p>
+<br>
+<center><img src="nau.jpg" alt="nausicaa" width="450" height="250" /></center>
+  <h1>La critique d’une urbanisation folle</h1>
+<br>
+  <p><em>Cette critique, nous la retrouvons notamment dans Pompoko où des tanukis ont vu leur habitat naturel se faire saccager par les humains, ceci car ces derniers souhaitaient installer un nouveau lieu résidentiel sur ces terres. En effet, la ville de Tokyo subissait une crise du logement, de fait, les autorités ont voulu créer un nouveau quartier pour accueillir 300 000 habitants. Mais pour cela, les Hommes durent détruire la campagne environnante et tout l’écosystème local en rasant les collines et les forêts.</em></p>
+<br>
+<p><em>Comme nous pouvons l’imaginer, cela causa des dégâts irrémédiables chez les tanukis, ils n’avaient alors plus assez de place pour tous survivre et manquaient terriblement de nourriture. Par divers stratagèmes, ils tentèrent de faire cesser les travaux, cependant : « Loin de s’interrompre, les travaux reprirent de plus belle, les fleuves et les rivières furent recouverts de béton, les collines sans visage furent défigurées davantage par la construction de nouvelles routes, et les temples remplacés un par un par des bâtiments sans âme ». Le film se termine sur une bien triste image où le quartier résidentiel désormais construit est comparé à l’ancienne magnificence de la forêt. Les tanukis se sont alors vus restreints à quelques vulgaires parcs, bien loin de leur environnement naturel.</em></p>
+<br>
+  <center><img src="crise.jpg" alt="crise" width="250" height="250" /></center>
+<h1>Une dénonciation de la pollution marine et fluviale</h1>
+<br>
+<p><em>Dans Ponyo sur la falaise, sorti en 2008, le Studio Ghibli y cache une critique de la pollution marine dans un décor sublime où la faune et la flore sont pourtant magnifiées. En effet, le long métrage débute par un épisode de pêche en eau profonde où le navire racle les fonds marins. Seulement dans son filet, le pêcheur n’obtient pas vraiment des poissons mais un ensemble considérable de détritus qui ont été jetés à la mer, des pneus, conserves, bouteilles et autres objets en tout genre. Ces détritus, nous les retrouvons même à la surface de l’eau et ils viennent s’échouer sur les plages. Un personnage de l’histoire associé à la mer dit d’ailleurs détester les humains, car ils sont stupides et détruisent la nature. De facto, ce film dénonce la pollution marine et entre autres, le chalutage profond qui détruit les écosystèmes marins.</em></p>
+<br>
+<p><em>Seulement ce n’est pas le seul film d’animation à dénoncer cette pollution marine, et cela nous le constatons dans Le Voyage de Chihiro. Dans cette œuvre sortie en 2001, nous suivons une petite fille nommée Chihiro qui entra dans un monde d’esprit où pour survivre, elle dut travailler dans un établissement comprenant des thermes et des bains. Puis, vint un jour un esprit particulier dont elle extirpa de nombreux de déchets (bicyclette, frigo, bouteilles, conserves et outils). Il se révéla que ce client se trouvait être l’esprit d’une grande rivière, celle-ci avait été terriblement polluée et l’esprit était alors venu jusqu’aux bains afin d’être lavé.</em></p>
+<br>
+<center><img src="polution.jpg" alt="polutionlution" width="350" height="150" /></center>
+  <h1>L’importance de trouver un équilibre avec son environnement</h1>
+<br>
+<p><em>Pour le studio japonais, la protection de l’environnement, de la nature et des écosystèmes sont des engagements primordiaux. Cela, nous le voyons parfaitement dans deux films, Princesse Mononoké et Nausicaä de la Vallée du Vent. Le premier film propage l’idée d’un équilibre qui doit être respecté entre les Hommes et leur environnement : « C’était il y a bien longtemps, dans une contrée lointaine, jadis recouverte de forêts. En ce temps-là l’esprit de la nature veillait sur le monde, sous la forme d’animaux gigantesques, hommes et bêtes vivaient en harmonie. Mais les siècles passant, l’équilibre se modifia, les rares forêts que l’Homme n’avait alors pas saccagées furent alors protégées par des animaux immenses qui obéissaient au grand esprit de la forêt, c’était le temps des dieux et le temps des démons ». Ces démons veillaient à la protection de la forêt et beaucoup haïssaient désormais les humains pour leurs actes à l’encontre de la forêt : « Répugnantes créatures bientôt vous goûterez l’amertume de ma haine ». Ils les détestaient car certains humains avaient construit une forge et extrayaient du fer dans la région. Néanmoins, ils voulaient toujours plus et se mirent à exploiter d’autres filons de fer, n’hésitant pas à déboiser la forêt pour en atteindre de nouveaux, détruisant donc au passage l’habitat naturel de nombreux animaux de la forêt qui se mirent en colère. De plus, Miyazaki nous présente également ici la folie de certains hommes qui ont voulu tuer le grand esprit de la forêt et anéantir toute la forêt afin d’avoir une chasse gardée sur toutes les ressources qu’elle abritait : « Plus nous abattons d’arbres, plus nous extrayons de minerais, plus les animaux s’affaiblissent, ils disparaîtront sans qu’on ait eu besoin de les combattre ». Cependant, l’humanité ne peut pas se passer de la nature, elle doit apprendre à vivre avec et à la respecter, sans quoi, elle se vengera et la planète deviendra invivable.</em></p>
+<br>
+  <p><em>Quant à Nausicaä de la Vallée du Vent, ce film prend place dans un univers post-apocalyptique où l’humanité essaie de survivre face à une forêt nommée Fukai, qui reprend ses droits. Auparavant les Hommes avaient pollué la forêt et celle-ci s’était alors mise à dégager des spores empoisonnées fatales pour l’environnement encore non contaminé et l’humanité. Ainsi depuis des centaines d’années, les survivants essayèrent tant de bien que mal de vivre convenablement et de percer le mystère de cette forêt. Finalement, c’est l’héroïne de cette œuvre qui le découvrit, en réalité la forêt s’était transformée pour supprimer petit à petit la pollution qu’avaient créée les Hommes : « Les grands arbres ont poussé, puis ils ont rapidement évolué pour purifier le sol, les filtres neutralisent la pollution créée par l’Homme, les racines absorbent les toxines, les transforment en purs cristaux, puis l’arbre meurt et se transforme lui-même en sable ». Elle apprit également que l’écosystème de la forêt était en réalité tout à fait sain, mais que c’était la pollution qui rendait l’air toxique : « Dans un environnement non pollué, les plantes de la Fukai n’étaient plus toxiques, les poisons proviennent de la surface du sol ». Dès lors, la nature n’était en réalité pas du tout l’ennemie de l’humanité mais sa plus précieuse alliée : « Après mille ans de ténèbres, un être vêtu de bleu descendra du firmament et marchera sur un champ d’or pour renouer les liens entre la Terre et les Hommes que leur folie avait jadis coupée. Et il guidera toutes les nations de cette planète vers une Terre bleue et pure ». Cette personne dont il est question n’est autre que Nausicaä. Elle sut préserver l’équilibre entre les Hommes et leur environnement car certains d’entre eux comptaient détruire la forêt en espérant faire disparaître ce poison, ce qui n’aurait fait qu’empirer la situation. L’humanité ne peut qu’attendre que la forêt réussisse à vaincre la terre et l’air pollué, après cela, une nature saine pourra renaître. Hayao Miyazaki nous invite donc ici à respecter notre environnement, à ne pas le polluer, en retour, la nature saura nous apporter de nombreux bienfaits.</em></p>
+<br>
+<center><img src="equilibre.jpg" alt="equilibre" width="450" height="250" /></center>
+  <h1>Un problème majeur : le capitalisme</h1>
+<p><em>Le Studio Ghibli, à travers Hayao Miyazaki et Isao Takahata, apparaît sensiblement comme n’étant pas en accord avec le système économique dans lequel nous vivons aujourd’hui. Dans de nombreuses œuvres, nous pouvons constater le fait qu’ils rejettent cette idéologie, comme dans Princesse Mononoké où un groupe d’humains essaie de se développer industriellement, mais cela au détriment de la nature qui nous apparaît dans le film comme malade et qui se meurt à cause de l’action des Hommes. De fait, les réalisateurs font ici passer plusieurs messages, ils tiennent à protéger la nature face à la puissance destructrice de l’économie capitaliste, mais si l’on ne la tient pas en respect, la nature et les écosystèmes finiront par disparaître et toute l’humanité en pâtira. Ipso facto, ils souhaitent que les Hommes puissent prendre soin de leur environnement afin de vivre en harmonie avec celui-ci. Nous retrouvons également quelque peu la critique du consumérisme et du capitalisme dans le film Le voyage de Chihiro où les parents de cette dernière s’arrêtèrent à un stand de nourriture et se mirent à dévorer les plats jusqu’à ne plus s’arrêter, finissant par se transformer en cochon, qui est, entre autres, le symbole du capitalisme.</em></p>
+<br>
+<center><img src="capitalisme.jpeg" alt="capitalisme" width="450" height="250" /></center>
+  
+  <h1>Une nature magnifique qu’il faut chérir et protéger</h1>
+<br>
+<p><em>Cette volonté de protéger la nature, nous la retrouvons tout au long des œuvres du Studio. Elle est présentée comme belle et magnifique, comme une nature qu’il faut chérir et protéger afin de garder des espaces paisibles où la nature peut se développer tranquillement, sans être dérangée par l’Homme. Ainsi dans divers œuvres du Studio, la nature est sublimée, nous le voyons par exemple dans Mon voisin Totoro. Sorti en 1988, ce film raconte l’histoire d’une famille qui vient s’installer à la campagne et où deux enfants trouvèrent du réconfort auprès de l’esprit de la forêt, Totoro. Dans ce long métrage, la nature est présentée comme sage et saine, où les Hommes savent vivre en harmonie avec cette nature bienveillante.</em></p>
+<br>
+<p><em>Ipso facto Miyazaki nous montre sa vision idéalisée de la nature et notre devoir à tous de protéger ces écosystèmes qui sont fondamentaux pour notre survie. Il dénonce la folie de certains Hommes qui sont prêts à tout pour leurs propres profits, au détriment de l’environnement et de sa beauté. Il nous présente également quelques figures à suivre qui s’engagent pour sauver la nature et nous incite ainsi à faire de même. Au final, Le Studio Ghibli propage un message profondément écologique et leurs réalisateurs souhaitent nous rappeler la puissance et magnificence de la nature.</em></p>
+<center><img src="proteger.jpeg" alt="proteger" width="450" height="250" /></center>
+  <center><h2>L'histoire du studio en raccourci</h2>
+ <iframe width="500" height="300" src="https://www.youtube.com/embed/xZpjhzcGa5U" title="L'INCROYABLE HISTOIRE du studio GHIBLI (Totoro, Chihiro, Mononoké...)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+  
+ <p>Berthod Nathanael 2.13</p>
+</body>
+</html>

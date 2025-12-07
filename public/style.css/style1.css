@@ -1,0 +1,101 @@
+body {
+  background-color: #b4fdc7; 
+  color: #000000; 
+  font-family: "Open Sans", sans-serif;
+  padding: 4px 25px 5px 25px;
+  font-size: 18px;
+  margin: 0;
+}
+
+header {
+  
+  height : 80px ;
+  padding : 10px ;
+  background-color : #24F66D ;
+  background-image: url(fresque-studio-ghibli.jpg) ;
+  background-size:625px;
+  }
+
+/* Mise en forme du Menu */ 
+
+nav {  
+  background-color : green; 
+}
+
+nav ul {
+  overflow: hidden ;
+}
+
+nav li {
+  list-style-type: none ;
+  float : left ; 
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px 30px;
+  color: #000000 
+}
+
+
+/* Gestion du sur lignage du Menu */
+
+.menu-accueil:hover {
+  border-top: 5px solid #027a00;
+  background-color: RGBa(0,0,255,0.3);
+}
+
+.menu-page1:hover {
+  border-top: 5px solid #228000;
+  background-color: RGBa(0,0,255,0.3);
+}
+
+.menu-page2:hover {
+  border-top: 5px solid #227000;
+  background-color: RGBa(0,0,255,0.3);
+}
+
+.menu-page3:hover {
+  border-top: 5px solid #197500;
+  background-color: RGBa(0,0,255,0.3);
+}
+
+.menu-contact:hover {
+  border-top: 5px solid #008509;
+  background-color: RGBa(0,0,255,0.3);
+}
+
+
+footer {
+  width : 100%;
+  border : 2px solid black;
+  text-align : right;
+  padding : 6px;
+  margin-top : 100px; }
+
+h1 {
+  font-family: "Merriweather", serif;
+  text-align: center;
+  font-size: 36px;  
+}
+
+h2 {
+font-family: Verdana;
+font-style: italic;
+color: black;
+}
+
+#para_1 {
+font-style: italic;
+color: #093e16;
+}
+
+p {
+  color: #000000;
+}
+Strong {
+  background-color : red ;
+  color : black ;
+  font-weight : normal ;
+}
