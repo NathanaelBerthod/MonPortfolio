@@ -1,18 +1,64 @@
+{# templates/base.html.twig #}
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        
-        {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('style.css/style.css') }}">
-        {% endblock %}
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Portfolio - Nathanael{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    {# Thème Bootswatch (Flatly ici, change l’URL si tu veux un autre thème) #}
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/slate/bootstrap.min.css">
+
+    {% block stylesheets %}{% endblock %}
+  </head>
+  {# ICI on met le body en pleine hauteur #}
+  <body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ path('app_blog') }}">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link{% if app.request.attributes.get('_route') == 'app_blog' %} active{% endif %}"
+                 href="{{ path('app_blog') }}">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if app.request.attributes.get('_route') == 'page1' %} active{% endif %}"
+                 href="{{ path('page1') }}">Pour en savoir plus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if app.request.attributes.get('_route') == 'page2' %} active{% endif %}"
+                 href="{{ path('page2') }}">CV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if app.request.attributes.get('_route') == 'page3' %} active{% endif %}"
+                 href="{{ path('page3') }}">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {# main prend tout l’espace disponible entre navbar et footer #}
+    <main class="flex-fill">
+      {% block body %}{% endblock %}
+    </main>
+
+    <footer class="bg-dark text-light py-3 mt-5 no-print">
+      <div class="container text-center">
+        <small>
+          © 2025 Berthod Nathanael – Portfolio personnel.
+          Toute reproduction, même partielle, est interdite sans autorisation.
+        </small>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    {% block javascripts %}{% endblock %}
+  </body>
 </html>

@@ -1,63 +1,107 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Mon Portfolio{% endblock %}</title>
+{% extends 'base.html.twig' %}
 
-    <link rel="stylesheet" href="{{ asset('style.css/style.css') }}">
-</head>
+{% block title %}Accueil - Portfolio Nathanael{% endblock %}
 
-<body>
+{% block stylesheets %}
+  {{ parent() }}
+  <style>
+    .home-wrapper {
+      min-height: calc(100vh - 120px);
+      display: flex;
+      align-items: center;
+    }
+    .home-title {
+      font-size: clamp(3rem, 5vw, 3.8rem);
+      font-weight: 600;
+    }
+    .home-subtitle {
+      font-size: 1.3rem;
+    }
+    .home-text {
+      font-size: 1.05rem;
+    }
+    .home-buttons a {
+      font-size: 1.05rem;
+      padding: 0.9rem 2.6rem;
+    }
+    .home-divider {
+      width: 80px;
+      height: 3px;
+      margin: 1.5rem auto 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.6);
+    }
+    .home-tagline {
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .home-pill-row {
+      margin-top: 2.5rem;
+      font-size: 0.9rem;
+    }
+    .home-pill {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.35rem 0.9rem;
+      margin: 0.15rem 0.3rem;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+  </style>
+{% endblock %}
 
-<div class="top-bar">
-    <div>Open for any collaborations and offers</div>
-    <div>Folio Vol.1—</div>
-</div>
+{% block body %}
+<div class="container py-5 home-wrapper">
 
-<div class="center-title">
-    <h1>
-        <span class="italic">Nathanael</span> Berthod <span class="ml">(NB)</span>
-    </h1>
-</div>
+  <div class="w-100 text-center">
 
-
-    <nav class="main-nav">
-            <a href="{{ path('app_blog') }}">01 Works</a>
-            <a href="{{ path('page1') }}">02 About</a>
-            <a href="{{ path('page2') }}">03 Playgrounds</a>
-            <a href="{{ path('page3') }}">04 Contact</a>
-    </nav>
-
-  <div class="bottom-section">
-    <div class="left-text">
-        HUY PHAN (HE/HIM) AKA HUYML IS AN<br>
-        INDEPENDENT DESIGNER FROM HO CHI<br>
-        MINH CITY, VIETNAM
+    <div class="home-tagline text-muted mb-3">
+      PORTFOLIO ÉTUDIANT • BUT R&amp;T
     </div>
 
-    <div class="middle-img">
-        <img src="/images/illustration.png" alt="design">
-        <p>Just an ordinary designer. From Vietnam with love.</p>
-    </div>
+    <header class="mb-4">
+      <h1 class="home-title mb-2">Berthod Nathanael</h1>
+      <p class="home-subtitle mb-2">
+        Étudiant en BUT Réseaux &amp; Télécommunications – Groupe TP B2
+      </p>
+      <p class="home-text mb-0">
+        Portfolio académique réalisé avec Symfony, Bootstrap &amp; Bootswatch, présentant mon parcours,
+        mes compétences et quelques projets personnels.
+      </p>
+      <div class="home-divider"></div>
+    </header>
 
-    <div class="right-text">
-        PASSIONATE ABOUT CREATING<br>
-        UNFORGETTABLE AND BEAUTIFUL DIGITAL<br>
-        EXPERIENCES.
-    </div>
+    <section class="my-4">
+      <p class="home-text text-muted mb-4">
+        Choisissez où commencer&nbsp;: découvrir mon CV, en savoir plus sur mes loisirs &amp; passions
+        ou parcourir mon e‑portfolio de compétences.
+      </p>
+
+      <div class="home-buttons d-flex justify-content-center flex-wrap gap-3 mb-4">
+        <a href="{{ path('page2') }}" class="btn btn-light btn-lg text-dark">
+          CV
+        </a>
+        <a href="{{ path('page1') }}" class="btn btn-outline-light btn-lg">
+          Loisirs &amp; passions
+        </a>
+        <a href="{{ path('page3') }}" class="btn btn-outline-light btn-lg">
+          E‑portfolio
+        </a>
+      </div>
+
+      <div class="home-pill-row text-muted">
+        <span class="home-pill">Réseaux &amp; Internet</span>
+        <span class="home-pill">Linux &amp; services</span>
+        <span class="home-pill">Docker &amp; labs</span>
+        <span class="home-pill">Développement web</span>
+        <span class="home-pill">Badminton</span>
+        <span class="home-pill">Manga &amp; dessin</span>
+      </div>
+    </section>
+
+  </div>
+
 </div>
-
-
-<main>
-    {% block body %}{% endblock %}
-</main>
-
-</body>
-</html>
-
-
-
-
-
-
-
+{% endblock %}
