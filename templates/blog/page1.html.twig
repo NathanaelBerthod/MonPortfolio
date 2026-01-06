@@ -1,46 +1,85 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pour en savoir plus - Nathanael{% endblock %}
+{% block title %}En savoir plus - Nathanael{% endblock %}
 
 {% block stylesheets %}
-  {{ parent() }}
-  <style>
-    .about-hero {
-      max-width: 900px;
-      margin: 3rem auto 2rem;
-      text-align: center;
-    }
-    .about-hero h1 {
-      font-size: clamp(2.3rem, 4vw, 2.8rem);
-      margin-bottom: 0.5rem;
-    }
-    .about-hero p {
-      font-size: 1.05rem;
-    }
-    .about-divider {
-      width: 80px;
-      height: 3px;
-      margin: 1.5rem auto 0;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.6);
-    }
-    .about-section-title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    .about-icon {
-      font-size: 2rem;
-      opacity: 0.9;
-      margin-bottom: 0.5rem;
-    }
-    .card-soft {
-      background-color: rgba(0,0,0,0.15);
-      border: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(2px);
-    }
-  </style>
+{{ parent() }}
+<style>
+:root {
+  --bg-card: #1e1f23;
+  --bg-card-soft: #24262b;
+  --border-soft: rgba(255,255,255,0.08);
+  --text-muted: #9aa0a6;
+  --accent: #4ade80;
+}
+
+/* HERO */
+.about-hero {
+  max-width: 900px;
+  margin: 4rem auto 3rem;
+  text-align: center;
+}
+.about-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.about-hero p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin: 0.75rem auto 0;
+}
+.about-divider {
+  width: 64px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 999px;
+  margin: 2rem auto 0;
+}
+
+/* TITRES */
+.about-section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* CARDS */
+.card-modern {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  padding: 1.75rem;
+  height: 100%;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card-modern:hover {
+  transform: translateY(-6px);
+  border-color: rgba(74,222,128,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
+.card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.card-modern h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: .75rem;
+}
+.card-modern p {
+  color: var(--text-muted);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+/* BLOCS BAS */
+.card-highlight {
+  background: linear-gradient(145deg, var(--bg-card), var(--bg-card-soft));
+}
+</style>
 {% endblock %}
 
 {% block body %}
@@ -48,94 +87,79 @@
 
   <section class="about-hero">
     <h1>En savoir plus sur moi</h1>
-    <p class="text-muted">
-      Ce qui me motive en dehors des cours&nbsp;: sport, univers graphiques et projets
-      personnels qui complètent mon profil d’étudiant en BUT Réseaux &amp; Télécommunications.
+    <p>
+      Ce qui me motive en dehors des cours : sport, univers graphiques et projets
+      personnels qui complètent mon profil d’étudiant en BUT Réseaux & Télécommunications.
     </p>
     <div class="about-divider"></div>
   </section>
 
-  {# Loisirs & passions #}
   <section class="mb-5">
-    <h2 class="about-section-title">Loisirs &amp; passions</h2>
+    <h2 class="about-section-title">Loisirs & passions</h2>
     <div class="row g-4">
+
       <div class="col-md-4">
-        <div class="card h-100 card-soft">
-          <div class="card-body text-center">
-            <div class="about-icon">🏸</div>
-            <h3 class="card-title">Badminton</h3>
-            <p class="card-text">
-              Sport que je pratique régulièrement. Il développe ma réactivité, mon endurance
-              et l’esprit d’équipe, des qualités que je retrouve dans le travail en projet
-              informatique et réseau.
-            </p>
-          </div>
+        <div class="card-modern text-center">
+          <div class="card-icon">🏸</div>
+          <h3>Badminton</h3>
+          <p>
+            Sport que je pratique régulièrement. Il développe ma réactivité,
+            mon endurance et l’esprit d’équipe, utiles en projet informatique et réseau.
+          </p>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="card h-100 card-soft">
-          <div class="card-body text-center">
-            <div class="about-icon">📚</div>
-            <h3 class="card-title">Manga</h3>
-            <p class="card-text">
-              Univers graphiques et narratifs qui nourrissent mon imagination, mon sens visuel
-              et ma créativité. Ils influencent la façon dont j’aborde le design d’interfaces
-              et l’expérience utilisateur.
-            </p>
-          </div>
+        <div class="card-modern text-center">
+          <div class="card-icon">📚</div>
+          <h3>Manga</h3>
+          <p>
+            Univers graphiques et narratifs nourrissant mon imagination,
+            ma créativité et mon approche du design d’interfaces et de l’UX.
+          </p>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="card h-100 card-soft">
-          <div class="card-body text-center">
-            <div class="about-icon">✏️</div>
-            <h3 class="card-title">Dessin</h3>
-            <p class="card-text">
-              Dessin traditionnel et numérique, qui m’apprend patience, précision
-              et attention au détail. Ces compétences m’aident aussi pour la réalisation
-              de schémas réseau et de documentations claires.
-            </p>
-          </div>
+        <div class="card-modern text-center">
+          <div class="card-icon">✏️</div>
+          <h3>Dessin</h3>
+          <p>
+            Dessin traditionnel et numérique : patience, précision et sens du détail,
+            utiles pour les schémas réseau et la documentation.
+          </p>
         </div>
       </div>
+
     </div>
   </section>
 
-  {# Envies & projets #}
   <section class="row g-4">
     <div class="col-md-6">
-      <div class="card h-100 card-soft border-success">
-        <div class="card-body">
-          <h3 class="card-title">Envies</h3>
-          <p class="card-text">
-            Continuer à progresser en réseaux, cybersécurité et administration système,
-            tout en gardant un pied dans le développement web et l’UX pour comprendre
-            la vision globale d’un projet.
-          </p>
-          <p class="card-text">
-            M’impliquer dans des projets concrets (projets tutorés, labs personnels,
-            éventuels hackathons) afin de transformer la théorie en expériences réelles.
-          </p>
-        </div>
+      <div class="card-modern card-highlight">
+        <h3>Envies</h3>
+        <p>
+          Approfondir mes compétences en réseaux, cybersécurité et administration système,
+          tout en conservant une vision globale via le développement web et l’UX.
+        </p>
+        <p>
+          Participer à des projets concrets (labs, projets tutorés, hackathons)
+          pour transformer la théorie en pratique.
+        </p>
       </div>
     </div>
 
     <div class="col-md-6">
-      <div class="card h-100 card-soft border-info">
-        <div class="card-body">
-          <h3 class="card-title">Projets</h3>
-          <p class="card-text">
-            Construire un portfolio technique solide&nbsp;: topologies réseaux, services
-            Linux et Docker, petits outils d’automatisation et sites web réalisés en Symfony.
-          </p>
-          <p class="card-text">
-            Documenter chaque projet (objectifs, technologies, difficultés, résultats)
-            pour pouvoir le présenter clairement en entretien ou lors de futures candidatures
-            en alternance ou premier emploi.
-          </p>
-        </div>
+      <div class="card-modern card-highlight">
+        <h3>Projets</h3>
+        <p>
+          Construire un portfolio technique solide : topologies réseaux,
+          services Linux, Docker, automatisation et projets Symfony.
+        </p>
+        <p>
+          Documenter chaque projet pour les présenter clairement en entretien
+          ou candidature en alternance / premier emploi.
+        </p>
       </div>
     </div>
   </section>

@@ -38,4 +38,11 @@ final class BlogController extends AbstractController
     {
         return $this->render('blog/page3.html.twig');
     }
+
+    #[Route('/projet', name: 'page4')]
+    public function page4(): Response
+    {
+        return $this->render('blog/page4.html.twig');
+    }
+    
 }
