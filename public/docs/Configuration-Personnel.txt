@@ -1,0 +1,135 @@
+﻿Configuration personnel:
+en
+conf t
+hostname Snath
+ip domain-name reseau.local
+line console 0
+password admin
+login
+exit
+enable secret admin
+line vty 0 15
+transport input telnet
+login local
+exit
+interface FastEthernet0
+ no ip address
+ no sh
+interface FastEthernet0/1
+switchport mode trunk
+switchport trunk allowed vlan 2,30,31,32,150
+switchport trunk native vlan 150
+no sh
+interface FastEthernet0/2
+ switchport access vlan 30
+ switchport mode access
+no sh
+interface FastEthernet0/3
+ switchport access vlan 30
+ switchport mode access
+no sh
+interface FastEthernet0/4
+ switchport access vlan 30
+ switchport mode access
+no sh
+interface FastEthernet0/5
+ switchport access vlan 30
+ switchport mode access
+no sh
+interface FastEthernet0/6
+ switchport access vlan 30
+ switchport mode access
+no sh
+interface FastEthernet0/7
+ switchport access vlan 30
+ switchport mode access
+no sh
+interface FastEthernet0/8
+ switchport access vlan 30
+ switchport mode access
+no sh
+interface FastEthernet0/9
+ switchport access vlan 30
+ switchport mode access
+no sh
+interface FastEthernet0/10
+ switchport access vlan 30
+ switchport mode access
+no sh
+interface FastEthernet0/11
+ switchport access vlan 30
+ switchport mode access
+no sh
+interface FastEthernet0/12
+ switchport access vlan 31
+ switchport mode access
+no sh
+interface FastEthernet0/13
+ switchport access vlan 31
+ switchport mode access
+no sh
+interface FastEthernet0/14
+ switchport access vlan 31
+ switchport mode access
+no sh
+interface FastEthernet0/15
+ switchport access vlan 31
+ switchport mode access
+no sh
+interface FastEthernet0/16
+ switchport access vlan 32
+ switchport mode access
+no sh
+interface FastEthernet0/17
+ switchport access vlan 32
+ switchport mode access
+no sh
+interface FastEthernet0/18
+ switchport access vlan 32
+ switchport mode access
+no sh
+interface FastEthernet0/19
+ switchport access vlan 32
+ switchport mode access
+no sh
+interface FastEthernet0/20
+ switchport access vlan 32
+ switchport mode access
+no sh
+interface FastEthernet0/21
+ switchport access vlan 150
+ switchport mode access
+no sh
+interface FastEthernet0/22
+ switchport access vlan 150
+ switchport mode access
+no sh
+interface FastEthernet0/23
+ switchport mode access
+no sh
+interface FastEthernet0/24
+ switchport mode access
+no sh
+interface FastEthernet0/25
+ switchport mode access
+no sh
+interface FastEthernet0/26
+ switchport mode access
+no sh
+interface FastEthernet0/27
+ switchport mode access
+no sh
+interface FastEthernet0/28
+ switchport mode access
+no sh
+interface Vlan1
+ no ip address
+ shutdown
+interface Vlan30
+ ip address 192.168.30.254 255.255.255.0
+interface Vlan31
+ ip address 192.168.31.254 255.255.255.0
+interface Vlan32
+ ip address 192.168.32.254 255.255.255.0
+interface Vlan150
+ ip address 192.168.210.253 255.255.255.0
