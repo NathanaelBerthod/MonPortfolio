@@ -1,35 +1,55 @@
-README – Portfolio BUT R&T
-Présentation
-Ce projet est un portfolio web réalisé dans le cadre du BUT Réseaux & Télécommunications.
-Le site présente mon parcours, mes compétences et plusieurs projets académiques (SAE) de manière claire et structurée.
+Portfolio BUT R&T – Berthod Nathanael
+À propos du projet
+Ce site est un portfolio web réalisé pendant la première année du BUT Réseaux & Télécommunications.
+Il sert de vitrine pour mon parcours, mes compétences techniques et les projets que j’ai menés en cours (SAE) et en autonomie, dans un format clair et facile à présenter à l’oral.
+​
 
-Objectifs du site
-Centraliser mes travaux de première année (rapports, configurations, mesures, etc.).
+Contenu du site
+Accueil
+Présentation rapide (nom, formation, groupe de TP) et explication du but du site, avec des boutons pour accéder directement au CV, à la page “À propos” et au portfolio de compétences.
+​
 
-Montrer mes compétences en réseaux, systèmes et développement web.
+À propos
+Description de mon profil (réseaux, systèmes, web), de mes loisirs (badminton, manga, dessin) et de mes objectifs de progression dans le BUT.
+​
 
-Proposer un support lisible pour les soutenances et entretiens (CV, e‑portfolio, projets).
+CV
+Version lisible et imprimable de mon CV, organisée par rubriques (formation, compétences, expériences/projets scolaires, centres d’intérêt).
+​
 
-Contenu principal
-Accueil : présentation rapide (nom, formation, contexte du portfolio) et accès direct aux autres pages.
+Compétences
+Classement de mes compétences par domaines :
 
-À propos : profil, centres d’intérêt (badminton, manga, dessin) et objectifs de progression.
+réseaux (adressage IP, VLAN, diagnostic)
 
-CV : version lisible du CV avec mise en page adaptée à l’impression.
+systèmes (Linux, services réseau, VM)
 
-Compétences : compétences classées par domaines (réseaux, Linux/services, web, etc.).
+développement web (Symfony, Twig, Bootstrap).
+​
 
-Projets : cartes simples pour chaque SAE/projet (SAE1.02, SAE1.03, services Linux, portfolio Symfony) avec objectif, ce que j’ai fait, technologies utilisées et liens vers les documents (PDF, config switch, guide TFTP).
+Projets
+Cartes simples qui présentent chaque projet avec : objectif, ce que j’ai fait, technologies utilisées, et liens vers les preuves (PDF, configs).
+Par exemple :
+
+SAE1.02 : extension d’un réseau d’entreprise, analyse de trames (Wireshark), VLAN, trunk, SSH, TFTP, sauvegarde de configuration.
+​
+
+SAE1.03 : qualification de câblage et mesures Wi‑Fi dans une salle réelle, tests FLUKE, NetScout, devis matériel et recommandations.
+​
+
+Portfolio Symfony : création de ce site avec Symfony, Twig, Bootstrap et Bootswatch.
+​
 
 Partie technique
 Le site est développé avec :
 
-Symfony (structure MVC, routes, contrôleurs)
+Symfony pour la structure (routes, contrôleurs, rendu des templates Twig).
+​
 
-Twig (templates et héritage de base.html.twig)
+Twig pour l’héritage de base.html.twig et la mise en page des pages (accueil, CV, compétences, projets).
+​
 
-Bootstrap 5 & Bootswatch (thème Slate) pour la mise en forme responsive
+Bootstrap 5 + Bootswatch pour un design responsive sobre et cohérent (containers, grid, boutons, cartes).
+​
 
-HTML / CSS pour les ajustements visuels
-
-Ce portfolio est pensé pour être sobre, facile à parcourir, et simple à présenter à l’oral.
+L’objectif est de proposer un portfolio simple, lisible et professionnel, utilisable à la fois pour les soutenances de SAE et pour de futurs entretiens
